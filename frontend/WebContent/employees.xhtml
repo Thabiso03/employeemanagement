@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+	
+    <h:head>
+        <title>TUT Employees List</title>
+    </h:head>
+    <h:body>
+    	<h2>Employees</h2>
+    	<h:dataTable value="#{employeecontroller.getEmployeeList()}" var="e">
+   			<h:column>
+   				<!-- column header -->
+   				<f:facet name="header">Id</f:facet>
+   				<!-- row record -->
+   				#{e.Id}
+   			</h:column>
+   			<h:column>
+   				<!-- column header -->
+   				<f:facet name="header">First name</f:facet>
+   				<!-- row record -->
+   				#{e.FirstName}
+   			</h:column>
+   			<h:column>
+   				<f:facet name="header">Surname</f:facet>
+   				#{e.Surname}
+   			</h:column>
+   			<h:column>
+   				<f:facet name="header">Date of birth</f:facet>
+   				#{e.DateOfBirth}
+   			</h:column>
+   		</h:dataTable>
+    </h:body>
+</html>
